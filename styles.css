@@ -1,0 +1,46 @@
+:root{
+  --slate-300:#D5E1EF;
+  --slate-500:#68778D;
+  --slate-900:#1F314F;
+  --white:#ffff;
+  
+  --ff-primary: Outfit;
+  
+  --fw-regular: 400;
+  --fw-bold: 900;
+  
+  --fs-primary: 1.375rem;
+  --fs-secondary: .9375rem;
+  
+  --ltrsp-secondary: .2px;
+  
+  --lh-primary: 120%;
+  --lh-secondary: 140%;
+  
+  --spacing-500:2.5em;
+  --spacing-300:1.5em;
+  --spacing-200:1em;
+  
+  --clr-bg: var(--slate-300);
+} 
+
+
+body{
+  background-color: var(--clr-bg);
+}
+
+.center-div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper {
+  font-family: var(--ff-primary);
+  min-height: 31.1875em;
+  width: 20em;
+  background-color: var(--white);
+  border-radius: ;
+}
+
