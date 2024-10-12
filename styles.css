@@ -1,8 +1,91 @@
+/*RESET*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+html, body{
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+
+
+/*END OF RESET*/
 :root{
-  --slate-300:#D5E1EF;
-  --slate-500:#68778D;
-  --slate-900:#1F314F;
-  --white:#ffff;
+  --clr-slate-300:#D5E1EF;
+  --clr-slate-500:#68778D;
+  --clr-slate-900:#1F314F;
+  --clr-white:#ffff;
   
   --ff-primary: Outfit;
   
@@ -21,9 +104,13 @@
   --spacing-300:1.5em;
   --spacing-200:1em;
   
-  --clr-bg: var(--slate-300);
+  --cr-wrapper:20px;
+  --cr-img: 10px;
+  --clr-bg: var(--clr-slate-300);
 } 
-
+*{
+  font-family: var(--ff-primary);
+}
 
 body{
   background-color: var(--clr-bg);
@@ -34,13 +121,44 @@ body{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+  }
 
 .wrapper {
   font-family: var(--ff-primary);
   min-height: 31.1875em;
   width: 20em;
-  background-color: var(--white);
-  border-radius: ;
+  background-color: var(--clr-white);
+  border-radius: var(--cr-wrapper);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: flex-start;
 }
 
+.img-qrcode {
+  border-radius: var(--cr-img);
+  margin-top: var(--spacing-200);
+  margin-left: var(--spacing-200);
+}
+
+.txt-title {
+  text-align: center;
+  font-size: var(--fs-primary);
+  font-weight: var(--fw-bold);
+  color: var(--clr-slate-900);
+  margin-top: var(--spacing-300);
+  line-height: var(--lh-primary);
+}
+
+.txt-sub {
+  font-size: var(--fs-secondary);
+  font-weight: var(--fw-regular);
+  color: var(--clr-slate-500);
+  letter-spacing: var(--ltrsp-secondary);
+  min-height: 3.9375em;
+  width: 256px;
+  margin:  0 auto;
+  margin-top: var(--spacing-200);
+  line-height: var(--lh-secondary);
+  text-align: center;
+}
