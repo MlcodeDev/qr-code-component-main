@@ -1,4 +1,4 @@
-/*RESET*/
+/*BEGINNING OF THE RESET*/
 
 /* Box sizing rules */
 *,
@@ -26,16 +26,11 @@ figure, blockquote, dl, dd {
   margin-block-end: 0;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
-}
-
 /* Set core body defaults */
 html, body{
   height: 100%;
 }
+
 body {
   line-height: 1.5;
 }
@@ -52,12 +47,6 @@ h3, h4 {
   text-wrap: balance;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-  color: currentColor;
-}
-
 /* Make images easier to work with */
 img,
 picture,
@@ -66,21 +55,8 @@ svg {
   display: block;
 }
 
-/* Inherit fonts for inputs and buttons */
-
-/* Make sure textareas without a rows attribute are not tiny */
-textarea:not([rows]) {
-  min-height: 10em;
-}
-
-/* Anything that has been anchored to should have extra scroll margin */
-:target {
-  scroll-margin-block: 5ex;
-}
-
-
-
 /*END OF RESET*/
+
 :root{
   --clr-slate-300:#D5E1EF;
   --clr-slate-500:#68778D;
